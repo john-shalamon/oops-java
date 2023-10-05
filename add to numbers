@@ -1,0 +1,10 @@
+public class Mavenproject1
+{
+    public static void main(String ab[])
+    {
+        int a=220,b=30,c;
+        c=a+b;
+        System.out.println(c);
+        
+    }
+}
