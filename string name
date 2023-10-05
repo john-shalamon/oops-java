@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class Mavenproject1
+  {
+     public static void main(String arg[])
+     {
+  String a;
+  Scanner S1=new Scanner(System.in);
+  System.out.println("enter the value");
+  a=S1.next();
+  System.out.println("the entered value"+a);
+  }
+  }
