@@ -1,0 +1,12 @@
+class Add {
+    Add(int a, int b) {
+        System.out.println("sum of (a+b)=" + (a+b));
+    }
+    Add(float a, float b) {
+        System.out.println("sum of (a+b)=" + (a+b));
+    }
+    public static void main(String[] ab) {
+        Add obj1 = new Add(60, 40);
+        Add obj2 = new Add(12.5f, 4.5f);
+    }
+}
