@@ -1,0 +1,26 @@
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+
+# Sample data: temperature readings and whether the machine failed (1) or not (0)
+data = {
+    'temperature': [70, 75, 80, 85, 90, 95, 100, 105, 110, 115],
+    'failure': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+}
+
+df = pd.DataFrame(data)
+
+# Split the data into features and target
+X = df[['temperature']]
+y = df['failure']
+
+# Train a simple logistic regression model
+model = LogisticRegression()
+model.fit(X, y)
+
+# New temperature reading
+new_temperature = [[92]]
+
+# Predict the probability of failure
+probability_of_failure = model.predict_proba(new_temperature)[0][1]
+
+print(f"Probability of failure at {new_temperature[0][0]}°F: {probability_of_failure:.2f}")
